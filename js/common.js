@@ -1,20 +1,5 @@
 $(document).ready(function() {
-	$(".wrap-item ul").after("<div class='wrap-item-af'></div>");
-	$(".togle").click(function() {
-		if($(this).parent().children("ul").is(":visible")) {
-		$(this).parent().children("ul").slideUp();
-		$(this).parent().children(".wrap-item-af").hide();
-		$(this).parent().removeClass("active");
-		$(this).removeClass("active");
-	} else {
-		$(".wrap-item > ul, .wrap-item-af").hide();
-		$(".wrap-item, .togle").removeClass("active");
-		$(this).parent().addClass("active");
-		$(this).addClass("active");
-		$(this).parent().children("ul").slideDown();
-		$(this).parent().children(".wrap-item-af").show(200);
-	}
-	});
+
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -33,7 +18,7 @@ $(document).ready(function() {
 	//equalheight - одинаковая высота колонок
 	//Пример списка элементов:
 	//var eqElement = ".cat_container > div, .home_news > div"
-	var eqElement = ".h-item"
+	var eqElement = ".element"
 	$(window).load(function(){equalheight(eqElement);}).resize(function(){equalheight(eqElement);});
 
 	//Masked Input Plugin
